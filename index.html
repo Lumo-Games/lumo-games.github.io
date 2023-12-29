@@ -36,7 +36,7 @@
 
         .navbar {
             position: fixed;
-            right: 25%;
+            right: 0%;
             top: 0;
 
             padding: 18px 20px;
@@ -151,14 +151,36 @@
             margin-bottom: 0;
         }
 
-
         @media screen and (max-aspect-ratio: 2/1) {
             body {
                 background-size: auto 130%;
             }
+        }
 
+        @media screen and (min-width: 1499px){
             .navbar {
-                right: 18%;
+                right: 17%;
+                text-align: right;
+            }
+        }
+
+        @media screen and (min-width: 1349px)and (max-width: 1500px){
+            .navbar {
+                right: 13%;
+                text-align: right;
+            }
+        }
+
+        @media screen and (min-width: 1249px)and (max-width: 1350px){
+            .navbar {
+                right: 10%;
+                text-align: right;
+            }
+        }
+
+        @media screen and (min-width: 1150px) and (max-width: 1250px){
+            .navbar {
+                right: 8%;
                 text-align: right;
             }
         }
