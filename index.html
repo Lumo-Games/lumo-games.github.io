@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <link rel="icon" href="icon.png">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lumo Team | Game Studio</title>
@@ -31,7 +33,9 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            height: 80vh;
+            min-height: 80vh;
+
+            margin-bottom: 3%;
         }
 
         .navbar {
@@ -50,7 +54,10 @@
         }
 
         .navbar a {
-            background-color: #0000009a;
+            background-color: #00000089;
+            -webkit-backdrop-filter: blur(3px);
+            backdrop-filter: blur(3px);
+
             color: white;
             margin: 0 8px;
 
@@ -58,7 +65,7 @@
             transition: background-color 0.3s, color 0.3s;
 
             padding: 8px 15px;
-            border: 2px solid #fff;
+            border: 2px solid #89dc7e;
             border-radius: 20px;
         }
 
@@ -75,20 +82,19 @@
             background-color: #20231fcc;
             color: white;
             text-align: left;
-            padding: 10px 20px;
+            padding: 10px 25px;
 
-            z-index: 100;
+            z-index: 150;
         }
 
         .footer2 {
             position: fixed;
             right: 0;
             bottom: 0;
-            width: 100%;
 
             color: white;
             text-align: right;
-            padding: 10px 20px;
+            padding: 10px 25px;
 
             z-index: 200;
         }
@@ -113,6 +119,8 @@
                     rgba(0, 0, 0, 0.7),
                     rgba(0, 0, 0, 0.6),
                     rgba(0, 0, 0, 0.25));
+
+            -webkit-backdrop-filter: blur(3px);
             backdrop-filter: blur(3px);
             color: white;
             padding: 30px;
@@ -121,6 +129,7 @@
 
             border: 2px solid #ffd94e;
             border-radius: 20px;
+            z-index: 100;
         }
 
         .welcome-section h1,
@@ -149,10 +158,6 @@
 
         .contact-section a:hover {
             color: green;
-        }
-
-        .section:last-child {
-            margin-bottom: 0;
         }
 
         @media screen and (max-aspect-ratio: 2/1) {
@@ -195,10 +200,11 @@
             }
 
             .navbar {
-                left: 1%;
+                justify-content: center;
+                left: 0%;
                 text-align: left;
             }
-            
+
             .navbar a {
                 margin: 0px 0px;
                 padding: 8px 12px;
@@ -206,15 +212,13 @@
 
             .container {
                 max-width: 85%;
+                margin-bottom: 6%;
             }
-        }
-
-        @media screen and (max-width: 600px) {
 
             .welcome-section h1,
             .about-section h1,
             .contact-section h1 {
-                font-size: 2em;
+                font-size: 6vw;
             }
         }
     </style>
@@ -224,24 +228,34 @@
     <div class="container">
         <div class="welcome-section" id="home">
             <h1>Welcome to Lumo Team!</h1>
-            <p>Immerse yourself in a world of innovation and creativity</p>
+            <i>
+                <p>Immerse yourself in a world of innovation and creativity</p>
+            </i>
         </div>
 
 
         <div class="about-section" id="about">
             <h2>About Us</h2>
-            <p>We are a game development studio with a deep passion for what we do ♥</p>
-            <p>
-                Founded by a few seasoned professionals who are experts in their fields.
-                We are committed to pushing the boundaries of gaming, creating immersive experiences that resonate and
-                inspire.
-                Join us on this exciting journey as we embark on a quest to create games that are not just played but
-                cherished!</p>
+            <b>
+                <p>We are a game development studio with a deep passion for what we do ❤️</p>
+            </b>
+            <i>
+                <p>
+                    Founded by a few seasoned professionals who are experts in their fields.
+                    We are committed to pushing the boundaries of gaming, creating immersive experiences that resonate
+                    and
+                    inspire.
+                    Join us on this exciting journey as we embark on a quest to create games that are not just played
+                    but
+                    cherished!</p>
+            </i>
         </div>
 
         <div class="contact-section" id="contact">
             <h2>Contact Us</h2>
-            <p>Get in touch for more information</p>
+            <i>
+                <p>Get in touch for more information</p>
+            </i>
             <h1><a href="mailto:hello@lumoteam.com">hello@lumoteam.com</a></h1>
         </div>
     </div>
