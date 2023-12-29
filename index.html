@@ -12,7 +12,7 @@
 
         body {
             background-image: url('background_1.jpg');
-            background-size: auto 135%;
+            background-size: auto 200%;
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-position: center;
@@ -24,29 +24,34 @@
             padding: 0;
         }
 
-        @media screen and (max-aspect-ratio: 1/1) {
-            body {
-                background-size: auto 100%;
-            }
+        .container {
+            margin: 0 auto;
+            max-width: 1000px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 80vh;
         }
 
         .navbar {
             position: fixed;
-            right: 0;
+            right: 25%;
             top: 0;
 
-            padding: 10px 20px;
+            padding: 18px 20px;
             font-size: 1.2em;
             text-align: right;
+
+            z-index: 1000;
         }
 
         .navbar a {
             background-color: #0000009a;
             color: white;
-            margin: 0 15px;
+            margin: 0 8px;
             text-decoration: none;
             transition: background-color 0.3s, color 0.3s;
-
 
             padding: 8px 15px;
             border: 2px solid #fff;
@@ -63,10 +68,12 @@
             left: 0;
             bottom: 0;
             width: 100%;
-            background-color: #20231fc3;
+            background-color: #20231fcc;
             color: white;
             text-align: left;
             padding: 10px 20px;
+
+            z-index: 100;
         }
 
         .footer2 {
@@ -78,6 +85,8 @@
             color: white;
             text-align: right;
             padding: 10px 20px;
+
+            z-index: 200;
         }
 
         .footer2 a {
@@ -87,15 +96,6 @@
 
         .footer2 a:hover {
             color: green;
-        }
-
-        .container {
-            margin: 0 auto;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 80vh;
         }
 
         .welcome-section,
@@ -114,6 +114,9 @@
             padding: 30px;
             text-align: center;
             margin-bottom: 50px;
+
+            border: 2px solid #ffd94e;
+            border-radius: 20px;
         }
 
         .welcome-section h1,
@@ -130,7 +133,9 @@
         }
 
         .welcome-section {
-            margin-top: 45px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 75px;
         }
 
         .contact-section a {
@@ -145,6 +150,43 @@
         .section:last-child {
             margin-bottom: 0;
         }
+
+
+        @media screen and (max-aspect-ratio: 2/1) {
+            body {
+                background-size: auto 130%;
+            }
+
+            .navbar {
+                right: 18%;
+                text-align: right;
+            }
+        }
+
+        @media screen and (max-aspect-ratio: 1/1) {
+            body {
+                background-size: auto 100%;
+            }
+
+            .navbar {
+                left: 0;
+                text-align: left;
+                width: 110%;
+            }
+
+            .container {
+                max-width: 85%;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+
+            .welcome-section h1,
+            .about-section h1,
+            .contact-section h1 {
+                font-size: 2em;
+            }
+        }
     </style>
 </head>
 
@@ -158,7 +200,7 @@
 
         <div class="about-section" id="about">
             <h2>About Us</h2>
-            <p>We are a game development studio with a deep passion for what we do</p>
+            <p>We are a game development studio with a deep passion for what we do ♥</p>
             <p>
                 Founded by a few seasoned professionals who are experts in their fields.
                 We are committed to pushing the boundaries of gaming, creating immersive experiences that resonate and
@@ -176,6 +218,7 @@
 
     <div class="navbar">
         <a href="#home">Home</a>
+        <a href="#games">Games</a>
         <a href="#about">About</a>
         <a href="#contact">Contacts</a>
     </div>
@@ -187,6 +230,14 @@
     <div class="footer2">
         <p> <a href="mailto:hello@lumoteam.com">hello@lumoteam.com</a></p>
     </div>
+
+
+    <script src='fireflies.js'></script>
+    <script>
+        (function () {
+            fireFlies();
+        })();
+    </script>
 </body>
 
 </html>
